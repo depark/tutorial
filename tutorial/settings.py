@@ -17,10 +17,10 @@ NEWSPIDER_MODULE = 'tutorial.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'tutorial (+http://www.yourdomain.com)'
-'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36'
+USER_AGENT='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+#ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -66,10 +66,12 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'tutorial.pipelines.MyImagePipline': 300,
-   'tutorial.pipelines.TutorialPipeline': 301,
+   'tutorial.pipelines.MyImagePipline': 400,
+   'tutorial.pipelines.TutorialPipeline': 500,
    # 'scrapy.pipelines.images.ImagesPipeline': 1
 }
+
+MEDIA_ALLOW_REDIRECTS=True
 
 IMAGES_STORE = 'images'
 FILES_STORE = '/opt/scrary/file/'

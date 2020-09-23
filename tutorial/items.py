@@ -21,5 +21,16 @@ class TutorialItem(scrapy.Item):
 class ChinaUniuxItem(scrapy.Item):
 
     title = scrapy.Field()
-    link = scrapy.Field()
+    image_path = scrapy.Field()
     desc = scrapy.Field()
+
+
+class RenRenItem(scrapy.Item):
+    title = scrapy.Field()
+    link = scrapy.Field()
+    type = scrapy.Field()
+    point = scrapy.Field()
+    image_path = scrapy.Field()
+    image_url = scrapy.Field()
+    level = scrapy.Field()
+    area = scrapy.Field()
